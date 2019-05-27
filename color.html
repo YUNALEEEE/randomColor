@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="color.css">
+    <title>Document</title>
+</head>
+    <body>
+        <h1 class = "title1">멋쟁이 유나처럼</h1>
+        <script>
+            let title1 = document.querySelector('.title1')
+            setInterval(function random_color() {
+                var x = Math.floor(Math.random() * 255) + 1;
+                var y = Math.floor(Math.random() * 255) + 1;
+                var z = Math.floor(Math.random() * 255) + 1;
+                var Color = "rgb("+ x + "," + y + "," + z +")";
+            console.log(Color);
+
+                title1.style.color = Color;
+            }, 100);
+
+
+            let body = document.querySelector('body')
+            setInterval(function random_bg_color() {
+                var x = Math.floor(Math.random() * 255) + 1;
+                var y = Math.floor(Math.random() * 255) + 1;
+                var z = Math.floor(Math.random() * 255) + 1;
+                var bgColor = "rgb("+ x + "," + y + "," + z +")";
+            console.log(bgColor);
+
+                document.body.style.background = bgColor;
+            }, 100);
+
+            // random_bg_color();
+            // console.log(document)
+
+        </script>
+    </body>
+</html>
